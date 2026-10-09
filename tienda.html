@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse Manga - tienda de manga online. Encuentra tus títulos favoritos.">
+  <title>Browse Manga | Brand Name</title>
+
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================ CABECERA ============================ -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+
+      <a class="logo" href="#">
+        <span class="logo__caja">
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+            viewBox="0 0 256 256">
+            <path
+              d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z">
+            </path>
+          </svg>
+        </span>
+        <span class="logo__texto">Brand name</span>
+      </a>
+
+      <!-- Menú: Flexbox obligatorio en la práctica -->
+      <nav class="menu" aria-label="Menú principal">
+        <a class="boton boton--suave" href="#">Best sellers</a>
+        <a class="boton boton--suave" href="#">FAQ</a>
+        <a class="boton boton--relleno" href="#">
+          Log In / Sign in
+          <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h13M13 6l6 6-6 6" />
+          </svg>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ============================ PORTADA / HERO ============================ -->
+  <section class="portada">
+    <div class="contenedor">
+      <h1 class="portada__titulo">Browse Manga</h1>
+      <p class="portada__subtitulo">Explore our collection of the best manga titles from around the world</p>
+    </div>
+  </section>
+
+  <!-- ============================ CATÁLOGO ============================ -->
+  <main class="contenedor catalogo">
+
+    <!-- Filtros + ordenación -->
+    <div class="filtros">
+      <ul class="filtros__lista">
+        <li><button class="etiqueta etiqueta--activa" type="button">All</button></li>
+        <li><button class="etiqueta" type="button">Shonen</button></li>
+        <li><button class="etiqueta" type="button">Seinen</button></li>
+        <li><button class="etiqueta" type="button">Shojo</button></li>
+        <li><button class="etiqueta" type="button">Isekai</button></li>
+        <li><button class="etiqueta" type="button">Horror</button></li>
+      </ul>
+
+      <div class="orden">
+        <svg class="icono" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5h16l-6 7v6l-4 2v-8z" />
+        </svg>
+        <label class="orden__texto" for="ordenar">Sort by:</label>
+        <select class="orden__select" id="ordenar" name="ordenar">
+          <option>Popular</option>
+          <option>Newest</option>
+          <option>A - Z</option>
+          <option>Price: low to high</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Rejilla de productos: Grid + Flexbox dentro de cada tarjeta -->
+    <section class="rejilla" aria-label="Listado de manga">
+
+      <!-- Sustituir el src de cada <img> por la carátula real -->
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F91gcgs1voAL._SL1500_.jpg&f=1&nofb=1&ipt=59c37c2e3a579b5ab9ab2627a36b466b8c318da9c32ce051ecd18b93ad499309&ipo=images"
+          alt="Portada de One piece" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">One piece</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$12.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnami.news%2Fwordpress%2Fwp-content%2Fuploads%2F2024%2F11%2FBoku-no-Hero-Academia-Manga-Cover-Volume-42.jpeg&f=1&nofb=1&ipt=210e4e645ba24d9e053cff377030dd58e172d411402a7b4dbb208f3d1bcf599a&ipo=images"
+          alt="Portada de My hero academia" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">My hero academia</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$14.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnaruto.vn%2Fwp-content%2Fuploads%2F2023%2F04%2FNARUTO-Vol.1.jpg&f=1&nofb=1&ipt=a7c3cd674bc78b3cc13984561b4f13713d6665744ee253cb85c0eb33feaf69f4&ipo=images"
+          alt="Portada de Naruto" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Naruto</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$11.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanimotaku.fr%2Fwp-content%2Fuploads%2F2022%2F09%2FManga-frieren-tome-1.jpeg&f=1&nofb=1&ipt=e566caa22c841eb380e24f023cd34a0624040e04bb88310c7a0b4b6b12f1af3e&ipo=images"
+          alt="Portada de Frieren" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Frieren</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$13.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.manga-passion.de%2F_next%2Fimage%3Furl%3Dhttps%3A%252F%252Fmedia.manga-passion.de%252Fvolume%252Fcover%252F2021%252F1022%252F2121%252F035015fa6d21760c05.jpg%26w%3D1920%26q%3D75&f=1&nofb=1&ipt=cd26aef24580e02c2a544bbbadda4be8d729a8de4221c4e8ac40bf41f5b04039&ipo=images"
+          alt="Portada de Jujutsu Kaisen" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Jujutsu Kaisen</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$15.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.manga-sanctuary.com%2Fv10_good%2Fpublic%2Fimg%2Fobjet%2Forigin%2F330101.jpg&f=1&nofb=1&ipt=060e5e70db6ecc75dedb336ea31a8237db40f7df93a4755ffb377be079c3ef2f&ipo=images"
+          alt="Portada de Chainsaw man" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Chainsaw man</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$12.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmangaes.com%2Fwp-content%2Fuploads%2F2023%2F11%2Fyourname_manga.jpg&f=1&nofb=1&ipt=f448fb9c0713be3a7935fd6d4e961de7d9cfb0d5f3d9cd351dd07e25db920592&ipo=images"
+          alt="Portada de Your name" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Your name</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$11.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img class="tarjeta__imagen"
+          src="https://static.wikia.nocookie.net/darling-in-the-franxx/images/a/ae/Volumen_1.jpg/revision/latest?cb=20180301160444&path-prefix=es"
+          alt="Portada de Darling in the Franxx" width="400" height="560">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Darling in the Franxx</h2>
+          <p class="tarjeta__autor">by lorem ipsum</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">$14.99</span>
+            <button class="boton-compra" type="button">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                viewBox="0 0 256 256">
+                <path
+                  d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z">
+                </path>
+              </svg>
+              Add
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Paginación -->
+    <nav class="paginacion" aria-label="Paginación">
+      <button class="paginacion__flecha" type="button" aria-label="Página anterior">
+        <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+          viewBox="0 0 256 256">
+          <path
+            d="M232,184a8,8,0,0,1-16,0A88,88,0,0,0,65.78,121.78L43.4,144H88a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V88a8,8,0,0,1,16,0v44.77l22.48-22.33A104,104,0,0,1,232,184Z">
+          </path>
+        </svg>
+      </button>
+      <button class="paginacion__numero paginacion__numero--activo" type="button" aria-current="page">1</button>
+      <button class="paginacion__numero" type="button">2</button>
+      <button class="paginacion__numero" type="button">3</button>
+      <button class="paginacion__numero" type="button">4</button>
+      <button class="paginacion__numero" type="button">5</button>
+      <button class="paginacion__flecha" type="button" aria-label="Página siguiente">
+        <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+          viewBox="0 0 256 256">
+          <path
+            d="M240,88v64a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h44.6l-22.36-22.21A88,88,0,0,0,40,184a8,8,0,0,1-16,0,104,104,0,0,1,177.54-73.54L224,132.77V88a8,8,0,0,1,16,0Z">
+          </path>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Formulario (obligatorio en la práctica) -->
+    <div class="newsletter__caja">
+      <form class="newsletter" action="#" method="post">
+        <label class="newsletter__etiqueta" for="email">Subscribe to the newsletter</label>
+        <div class="newsletter__campo">
+          <input class="newsletter__input" type="email" id="email" name="email" placeholder="tu@email.com" required>
+          <button class="boton boton--relleno" type="submit">Suscribirme</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- ============================ PIE DE PÁGINA ============================ -->
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+
+      <p class="pie__logo">Brand name</p>
+      <p class="pie__texto">© 2026 Brand name. All rights reserved. Made for manga fans everywhere.</p>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

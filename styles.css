@@ -1,0 +1,709 @@
+/* =========================================================
+   BRAND NAME - Browse Manga
+   Práctica 3 · Maquetación con HTML + CSS
+   Orden del fichero:
+     1. Variables
+     2. Reset y tipografía base
+     3. Utilidades (contenedor, iconos)
+     4. Cabecera
+     5. Portada (hero)
+     6. Filtros y ordenación
+     7. Rejilla de productos (tarjetas)
+     8. Paginación
+     9. Pie de página + formulario
+    10. Responsive
+   ========================================================= */
+
+/* ---------- 1. Variables ---------- */
+:root {
+  /* Paleta de colores: se usa en toda la página */
+  --naranja: #f7a928;
+  --naranja-oscuro: #e0901a;
+  --amarillo: #fbe89b;        /* portada */
+  --amarillo-claro: #fdf3c6;  /* botones suaves, paginación */
+  --crema: #fffbf2;           /* fondo de la página */
+  --tinta: #211b28;           /* texto y bordes */
+  --gris: #6f6a77;
+  --oscuro: #241c2b;          /* fondo del pie */
+  --blanco: #ffffff;
+
+  /* Tipografías */
+  --fuente-display: "Bagel Fat One", cursive;
+  --fuente-texto: "Nunito", sans-serif;
+
+  /* Medidas reutilizables */
+  --borde: 2px solid var(--tinta);
+  --radio: 1rem;
+  --sombra: 0 6px 18px rgba(33, 27, 40, 0.10);
+}
+
+/* ---------- 2. Reset y tipografía base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* todo el layout en rem */
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--tinta);
+  background-color: var(--crema);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #2f6fed;
+  outline-offset: 2px;
+}
+
+/* ---------- 3. Utilidades ---------- */
+.contenedor {
+  width: min(92%, 86rem);
+  margin-inline: auto;
+}
+
+.icono {
+  width: 1.5em;
+  height: 1.5em;
+  fill: black;
+  stroke: black;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Botones generales (cabecera y formulario) */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.2rem;
+  border: var(--borde);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background-color: var(--blanco);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton--suave {
+  background-color: var(--amarillo-claro);
+}
+
+.boton--suave:hover {
+  background-color: var(--amarillo);
+}
+
+.boton--relleno {
+  background-color: var(--naranja);
+}
+
+.boton--relleno:hover {
+  background-color: var(--naranja-oscuro);
+}
+
+/* ---------- 4. Cabecera ---------- */
+.cabecera {
+  background-color: var(--blanco);
+  border-bottom: var(--borde);
+}
+
+.cabecera__interior {
+  display: flex;              
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding-block: 0.9rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logo__caja {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background-color: var(--naranja);
+  border: var(--borde);
+}
+
+.logo__caja .icono {
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke-width: 1.8;
+}
+
+.logo__texto {
+  font-family: var(--fuente-display);
+  font-size: 1.55rem;
+  letter-spacing: 0.5px;
+}
+
+.menu {
+  display: flex;              
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+/* ---------- 5. Portada (hero) ---------- */
+.portada {
+  background-color: var(--amarillo);
+  border-bottom: var(--borde);
+  padding-block: 4.5rem;
+}
+
+.portada__titulo {
+  font-family: var(--fuente-display);
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.portada__subtitulo {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: #4a4453;
+}
+
+/* ---------- 6. Filtros y ordenación ---------- */
+.catalogo {
+  padding-block: 2.5rem 3.5rem;
+}
+
+.filtros {
+  display: flex;              
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.filtros__lista {
+  display: flex;              
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.etiqueta {
+  padding: 0.45rem 1.15rem;
+  border: var(--borde);
+  border-radius: 999px;
+  background-color: var(--blanco);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background-color 0.15s ease;
+}
+
+.etiqueta:hover {
+  background-color: var(--amarillo-claro);
+}
+
+.etiqueta--activa {
+  background-color: var(--naranja);
+}
+
+.etiqueta--activa:hover {
+  background-color: var(--naranja);
+}
+
+.orden {
+  display: flex;              
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  background-color: var(--blanco);
+  border: var(--borde);
+  border-radius: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.orden__select {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ---------- 7. Rejilla de productos ---------- */
+.rejilla {
+  display: grid;                            /* Grid para la rejilla */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.tarjeta {
+  display: flex;              
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  background-color: var(--blanco);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(33, 27, 40, 0.16);
+}
+
+.tarjeta__imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background-color: var(--amarillo-claro);
+  border: var(--borde);
+  border-radius: 0.7rem;
+}
+
+.tarjeta__cuerpo {
+  display: flex;              
+  flex-direction: column;
+  flex: 1;
+  gap: 0.2rem;
+  padding-inline: 0.2rem;
+}
+
+.tarjeta__titulo {
+  font-family: var(--fuente-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.tarjeta__autor {
+  font-size: 0.92rem;
+  color: var(--gris);
+}
+
+.tarjeta__pie {
+  display: flex;              
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+.tarjeta__precio {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.boton-compra {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background-color: var(--naranja);
+  border: var(--borde);
+  border-radius: 0.55rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.boton-compra:hover {
+  background-color: var(--naranja-oscuro);
+  transform: translateY(-2px);
+}
+
+/* ---------- 8. Paginación ---------- */
+.paginacion {
+  display: flex;              
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 3rem;
+}
+
+.paginacion__numero,
+.paginacion__flecha {
+  display: grid;
+  place-items: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: var(--borde);
+  border-radius: 50%;
+  background-color: var(--amarillo-claro);
+  font-weight: 800;
+  transition: background-color 0.15s ease;
+}
+
+.paginacion__numero:hover,
+.paginacion__flecha:hover {
+  background-color: var(--amarillo);
+}
+
+.paginacion__numero--activo,
+.paginacion__numero--activo:hover {
+  background-color: var(--naranja);
+}
+
+/* ---------- 9. Pie de página + formulario ---------- */
+.pie {
+  background-color: var(--oscuro);
+  color: #f3eef8;
+  margin-top: 4rem;
+}
+
+.pie__interior {
+  display: flex;              
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding-block: 3.2rem;
+  text-align: center;
+}
+
+.pie__logo {
+  font-family: var(--fuente-display);
+  font-size: 1.9rem;
+  color: var(--amarillo);
+}
+
+.pie__texto {
+  font-size: 0.95rem;
+  color: #b8aec6;
+}
+
+/* Formulario de newsletter */
+.newsletter {
+  display: flex;              
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  width: min(100%, 32rem);
+  background-color: var(--blanco);
+  padding: 1.5rem 1.8rem;
+  border: var(--borde);
+  border-radius: 0.8rem;
+}
+
+.newsletter__etiqueta {
+  font-weight: 700;
+  font-size: 1.8rem;
+
+}
+
+.newsletter__campo {
+  display: flex;              
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.newsletter__input {
+  flex: 1 1 14rem;
+  padding: 0.6rem 1.1rem;
+  background-color: var(--oscuro);
+  border-radius: 999px;
+  color: var(--blanco);
+}
+
+.newsletter__input::placeholder {
+  color: #a99fb9;
+}
+
+.newsletter__caja {
+  margin: 0 auto;
+  width: min(100%, 32rem);
+  margin-top: 3.5rem;
+}
+
+/* ---------- 10. Responsive ---------- */
+@media (max-width: 68rem) {          /* ~1088px */
+  .rejilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portada {
+    padding-block: 3.5rem;
+  }
+}
+
+@media (max-width: 40rem) {          /* ~640px */
+  .cabecera__interior {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .filtros {
+    justify-content: center;
+  }
+
+  .filtros__lista {
+    justify-content: center;
+  }
+
+  .rejilla {
+    grid-template-columns: 1fr;
+  }
+
+  .orden {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ---------- Landing page ---------- */
+.landing {
+  min-height: 100svh;
+  overflow: hidden;
+  background: #ffd43d;
+  border: 0.55rem solid var(--tinta);
+}
+
+.landing__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.landing__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.landing__brand-mark {
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.landing__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.landing__nav a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 251, 242, 0.75);
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.landing__nav a:hover {
+  transform: translateY(-2px);
+  background: var(--blanco);
+}
+
+.landing__nav .landing__login {
+  background: var(--naranja);
+  border: 1.5px solid var(--tinta);
+}
+
+.landing__login span,
+.landing__cta span {
+  font-size: 1.15em;
+  margin-left: 0.15rem;
+}
+
+.landing__hero {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.95fr) minmax(24rem, 1.15fr);
+  align-items: center;
+  min-height: calc(100svh - 3.5rem);
+  padding-top: 1rem;
+  position: relative;
+}
+
+.landing__copy {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 4rem;
+}
+
+.landing__eyebrow {
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.landing h1 {
+  max-width: 32rem;
+  font-family: var(--fuente-display);
+  font-size: clamp(3.5rem, 7.2vw, 6.2rem);
+  line-height: 0.94;
+  letter-spacing: 0.01em;
+}
+
+.landing__cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.4rem;
+  padding: 0.42rem 0.8rem;
+  border: 2px solid var(--tinta);
+  border-radius: 0.45rem;
+  box-shadow: 0 4px 0 var(--tinta);
+  background: var(--naranja);
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.landing__cta:hover {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--tinta);
+}
+
+.landing__art {
+  align-self: stretch;
+  min-height: 34rem;
+  position: relative;
+}
+
+.landing__sun {
+  position: absolute;
+  top: 2rem;
+  right: -6rem;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 48% 52% 45% 55%;
+  background: #fff0a0;
+}
+
+.landing__cats {
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+  width: min(45rem, 115%);
+  height: auto;
+}
+
+@media (max-width: 48rem) {
+  .landing {
+    border-width: 0.35rem;
+  }
+
+  .landing__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .landing__nav {
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+
+  .landing__hero {
+    display: block;
+    min-height: auto;
+    padding-top: 3rem;
+  }
+
+  .landing__copy {
+    padding-bottom: 0;
+  }
+
+  .landing h1 {
+    font-size: clamp(3.1rem, 14vw, 5rem);
+  }
+
+  .landing__art {
+    min-height: 25rem;
+    margin-top: -1rem;
+  }
+
+  .landing__sun {
+    top: 1rem;
+    right: -9rem;
+    width: 28rem;
+    height: 28rem;
+  }
+
+  .landing__cats {
+    right: -2rem;
+    width: 120%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .landing__nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .landing__nav a {
+    padding-inline: 0.65rem;
+  }
+
+  .landing__art {
+    min-height: 20rem;
+  }
+}
