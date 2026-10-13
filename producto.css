@@ -1,6 +1,3 @@
-/* Ficha de producto. Lo común (header, footer, tarjetas, botones)
-   sigue tirando de styles.css, aquí solo lo específico. */
-
 .migas {
   display: flex;
   flex-wrap: wrap;
