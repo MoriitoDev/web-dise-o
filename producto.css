@@ -1,0 +1,285 @@
+/* Ficha de producto. Lo común (header, footer, tarjetas, botones)
+   sigue tirando de styles.css, aquí solo lo específico. */
+
+.migas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--gris);
+  padding-block: 1.4rem 0.4rem;
+}
+
+.migas a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.migas a:hover {
+  color: var(--tinta);
+  text-decoration: underline;
+}
+
+.migas span {
+  color: #c3bcc9;
+}
+
+.migas__actual {
+  color: var(--tinta);
+  font-weight: 700;
+}
+
+/* ---------- ficha ---------- */
+.ficha {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding-block: 1.5rem 3rem;
+}
+
+.ficha__portada {
+  position: relative;
+}
+
+.ficha__portada img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--amarillo-claro);
+  border: 3px solid var(--tinta);
+  border-radius: 0.6rem;
+  box-shadow: 7px 7px 0 var(--tinta);
+}
+
+.ficha__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 42rem;
+}
+
+.etiqueta-tipo {
+  align-self: flex-start;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background: var(--amarillo);
+  border: var(--borde);
+  border-radius: 999px;
+}
+
+.ficha__titulo {
+  font-family: var(--fuente-display);
+  font-size: clamp(2rem, 4.6vw, 3rem);
+  line-height: 1.05;
+}
+
+.ficha__autor {
+  color: var(--gris);
+  margin-top: -0.6rem;
+}
+
+.precio {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.precio s {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gris);
+}
+
+.ficha__sinopsis {
+  color: #4a4453;
+  line-height: 1.65;
+}
+
+/* opciones de formato */
+.opciones__label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gris);
+  margin-bottom: 0.5rem;
+}
+
+.opciones__botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.opcion {
+  padding: 0.5rem 1.1rem;
+  background: var(--blanco);
+  border: var(--borde);
+  border-radius: 0.55rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.opcion:hover {
+  background: var(--amarillo-claro);
+}
+
+.opcion.is-active {
+  background: var(--amarillo-claro);
+  box-shadow: inset 0 -3px 0 var(--naranja);
+}
+
+.icono {
+  width: 1.2em;
+  height: 1.2em;
+  fill: black;
+  stroke: black;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* cantidad + carrito */
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+}
+
+.cantidad {
+  display: inline-flex;
+  align-items: center;
+  background: var(--blanco);
+  border: var(--borde);
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.cantidad button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.cantidad button:hover {
+  background: var(--amarillo-claro);
+}
+
+.cantidad input {
+  width: 2.2rem;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn-carrito {
+  font-size: 1rem;
+  padding: 0.75rem 1.6rem;
+}
+
+.btn-fav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  background: var(--blanco);
+  border: var(--borde);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: 0.15s ease;
+}
+
+.btn-fav:hover {
+  background: var(--amarillo-claro);
+  color: #d64545;
+  transition: 0.15s ease;
+}
+
+.btn-fav:hover svg {
+    fill: red;
+    stroke: red;
+    transition: 0.15s ease;
+}
+
+.aviso-envio {
+  font-size: 0.85rem;
+  color: var(--gris);
+  padding: 0.6rem 0.9rem;
+  background: var(--amarillo-claro);
+  border-radius: 0.5rem
+}
+
+/* tabla de detalles, sin <table> que es más lío que otra cosa */
+.ficha__meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 1.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1.2rem;
+  border-top: 2px dashed #e0d9c9;
+  font-size: 0.9rem;
+}
+
+.ficha__meta strong {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gris);
+  margin-bottom: 0.1rem;
+}
+
+/* relacionados */
+.relacionados {
+  border-top: var(--borde);
+  padding-block: 2.5rem 4rem;
+}
+
+.relacionados__titulo {
+  font-family: var(--fuente-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 48rem) {
+  .ficha {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ficha__portada {
+    max-width: 17rem;
+    margin-inline: auto;
+  }
+
+  .ficha__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-carrito {
+    flex: 1;
+    justify-content: center;
+  }
+}
