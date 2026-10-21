@@ -1,5 +1,5 @@
 /* =========================================================
-   BRAND NAME - Browse Manga
+   NyanComics - Browse Manga
    Práctica 3 · Maquetación con HTML + CSS
    Orden del fichero:
      1. Variables
@@ -291,6 +291,7 @@ a {
   border: 3px solid var(--tinta);
   border-radius: var(--radio);
   box-shadow: var(--sombra);
+  text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -632,6 +633,227 @@ a {
   .landing__cats {
     max-width: 100%;
     margin-top: 1rem;
+  }
+}
+
+/* ---------- Landing: historia, motivos y promo ---------- */
+.historia,
+.promo {
+  padding-block: 5rem;
+}
+
+.seccion__etiqueta {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background-color: var(--amarillo-claro);
+  border: var(--borde);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.seccion__titulo {
+  margin-top: 1rem;
+  font-family: var(--fuente-display);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+}
+
+.seccion__titulo--centro {
+  margin-top: 0;
+  text-align: center;
+}
+
+.historia__interior {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.historia__parrafo {
+  max-width: 40rem;
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+  color: #4a4453;
+}
+
+.historia__parrafo--suave {
+  color: var(--gris);
+}
+
+.historia__datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  margin-top: 2rem;
+  padding-top: 1.6rem;
+  border-top: var(--borde);
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.dato__cifra {
+  font-family: var(--fuente-display);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.dato__texto {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gris);
+}
+
+.historia__cita {
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--blanco);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: 8px 8px 0 var(--tinta);
+  transform: rotate(-1.5deg);
+}
+
+.historia__frase {
+  margin: 0;
+  font-family: var(--fuente-display);
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.historia__autor {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gris);
+}
+
+.motivos {
+  padding-block: 4.5rem;
+  background-color: var(--amarillo-claro);
+  border-block: var(--borde);
+}
+
+.motivos__lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.motivo {
+  padding: 1.6rem;
+  background-color: var(--blanco);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.motivo__numero {
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: var(--naranja);
+  border: var(--borde);
+  border-radius: 50%;
+  font-family: var(--fuente-display);
+  font-size: 1.1rem;
+}
+
+.motivo__titulo {
+  margin-top: 1rem;
+  font-family: var(--fuente-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.motivo__texto {
+  margin-top: 0.5rem;
+  color: var(--gris);
+}
+
+.promo {
+  padding-block: 4.5rem 5.5rem;
+}
+
+.promo__caja {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2.5rem;
+  background-color: var(--naranja);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: 8px 8px 0 var(--tinta);
+}
+
+.promo__texto {
+  max-width: 44rem;
+}
+
+.promo__etiqueta {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.promo__titulo {
+  margin-top: 0.4rem;
+  font-family: var(--fuente-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.promo__parrafo {
+  margin-top: 0.8rem;
+  font-size: 1.02rem;
+}
+
+.promo__cta {
+  padding: 0.7rem 1.3rem;
+  font-size: 1.15rem;
+  box-shadow: 4px 4px 0 var(--tinta);
+}
+
+.promo__cta:hover {
+  box-shadow: 1px 1px 0 var(--tinta);
+  transform: translate(3px, 3px);
+}
+
+@media (max-width: 56rem) {
+  .historia__interior {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .motivos__lista {
+    grid-template-columns: 1fr;
+  }
+
+  .promo__caja {
+    padding: 1.8rem;
+    box-shadow: 5px 5px 0 var(--tinta);
+  }
+}
+
+@media (max-width: 30rem) {
+  .historia__datos {
+    gap: 1.2rem;
   }
 }
 
