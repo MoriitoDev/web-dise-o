@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to NyanComics - The best store to buy your manga.">
+  <title>Log In | NyanComics</title>
+
+  <!-- Fuentes de Google (las usan la cabecera y el pie de la web) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 para el contenido; styles.css solo para cabecera y pie -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================ CABECERA ============================ -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+
+      <a class="logo" href="./index.html">
+        <span class="logo__caja">
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+            viewBox="0 0 256 256">
+            <path
+              d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z">
+            </path>
+          </svg>
+        </span>
+        <span class="logo__texto">NyanComics</span>
+      </a>
+
+      <nav class="menu" aria-label="Menú principal">
+        <a class="boton boton--suave" href="./tienda.html">Shop</a>
+        <a class="boton boton--suave" href="#">Best sellers</a>
+        <a class="boton boton--suave" href="#">FAQ</a>
+        <a class="boton boton--relleno" href="./login.html">
+          Log In / Sign in
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ============================ LOG IN ============================ -->
+  <main class="bg-warning-subtle border-bottom border-2 border-dark py-5">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-5">
+
+        <!-- Texto lateral -->
+        <section class="col-lg-6" aria-labelledby="auth-titulo">
+          <span class="badge rounded-pill bg-white text-dark border border-2 border-dark text-uppercase px-3 py-2">
+            Welcome back
+          </span>
+          <h1 class="display-3 fw-bold mt-3" id="auth-titulo">Your next volume is waiting</h1>
+          <p class="fs-5 text-body-secondary col-xl-9">
+            Log in to follow your orders, keep your wishlist and join the monthly reading club.
+          </p>
+          <img class="img-fluid w-75 d-none d-lg-block mt-4" src="./gatos.svg" alt="" aria-hidden="true">
+        </section>
+
+        <!-- Tarjeta con el formulario -->
+        <div class="col-lg-6 col-xl-5 ms-xl-auto">
+          <div class="card border-3 border-dark rounded-4 shadow-lg">
+            <div class="card-body p-4">
+
+              <ul class="nav nav-pills nav-fill gap-2">
+                <li class="nav-item">
+                  <a class="nav-link active bg-warning text-dark border border-2 border-dark rounded-pill fw-bold"
+                    href="./login.html" aria-current="page">Log In</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-warning-subtle text-dark border border-2 border-dark rounded-pill fw-bold"
+                    href="./register.html">Register</a>
+                </li>
+              </ul>
+
+              <h2 class="h2 fw-bold mt-4 mb-1">Log in to your account</h2>
+              <p class="text-body-secondary">Good to see you again, reader.</p>
+
+              <form class="mt-4" action="#" method="post" novalidate>
+
+                <div class="mb-3">
+                  <label class="form-label fw-bold" for="login-email">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-warning-subtle border-2 border-dark" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                          d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z">
+                        </path>
+                      </svg>
+                    </span>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="email"
+                      id="login-email" name="email" placeholder="you@email.com" autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="d-flex justify-content-between align-items-baseline">
+                    <label class="form-label fw-bold" for="login-password">Password</label>
+                    <a class="small fw-bold link-dark link-underline-warning" href="#">Forgot it?</a>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-text bg-warning-subtle border-2 border-dark" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                          d="M208,80H176V56a48,48,0,0,0-96,0V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80ZM96,56a32,32,0,0,1,64,0V80H96ZM208,208H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z">
+                        </path>
+                      </svg>
+                    </span>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="password"
+                      id="login-password" name="password" placeholder="Your password"
+                      autocomplete="current-password">
+                  </div>
+                </div>
+
+                <div class="form-check mb-4">
+                  <input class="form-check-input border-2 border-dark" type="checkbox" id="login-recordar"
+                    name="recordar">
+                  <label class="form-check-label fw-semibold" for="login-recordar">Keep me logged in</label>
+                </div>
+
+                <!-- Solo maquetación: el botón abre el modal, no envía nada -->
+                <button class="btn btn-warning btn-lg w-100 border-2 border-dark fw-bold shadow-sm" type="button"
+                  data-bs-toggle="modal" data-bs-target="#modal-login">
+                  Log In
+                </button>
+
+              </form>
+
+              <p class="text-center text-body-secondary mt-4 mb-0">
+                New to NyanComics?
+                <a class="fw-bold link-dark link-underline-warning" href="./register.html">Create an account</a>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================ MODAL DE FEEDBACK ============================ -->
+  <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-3 border-dark rounded-4 shadow-lg text-center">
+
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body pt-0 px-4">
+          <span class="d-inline-flex rounded-circle bg-warning border border-2 border-dark p-3 mb-3"
+            aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 256 256">
+              <path
+                d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z">
+              </path>
+            </svg>
+          </span>
+          <h2 class="modal-title h2 fw-bold" id="modal-login-titulo">You are in!</h2>
+          <p class="text-body-secondary mt-2 mb-0">
+            Welcome back to NyanComics. Your shelf, your wishlist and your orders are ready for you.
+          </p>
+        </div>
+
+        <div class="modal-footer border-0 justify-content-center pb-4">
+          <a class="btn btn-warning border-2 border-dark rounded-pill fw-bold px-4" href="./tienda.html">Go to the
+            shop</a>
+          <button type="button" class="btn btn-outline-dark border-2 rounded-pill fw-bold px-4"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ PIE DE PÁGINA ============================ -->
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+
+      <p class="pie__logo">NyanComics</p>
+      <p class="pie__texto">© 2026 NyanComics. All rights reserved. Made for manga fans everywhere.</p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
