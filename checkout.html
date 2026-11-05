@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout - NyanComics, the best store to buy your manga.">
+  <title>Checkout | NyanComics</title>
+
+  <!-- Fuentes de Google (las usan la cabecera y el pie de la web) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 para el contenido; styles.css solo para cabecera y pie -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================ CABECERA ============================ -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+
+      <a class="logo" href="./index.html">
+        <span class="logo__caja">
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+            viewBox="0 0 256 256">
+            <path
+              d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z">
+            </path>
+          </svg>
+        </span>
+        <span class="logo__texto">NyanComics</span>
+      </a>
+
+      <nav class="menu" aria-label="Menú principal">
+        <a class="boton boton--suave" href="./tienda.html">Shop</a>
+        <a class="boton boton--suave" href="#">Best sellers</a>
+        <a class="boton boton--suave" href="#">FAQ</a>
+        <a class="boton boton--relleno" href="./login.html">
+          Log In / Sign in
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ============================ CHECKOUT (mockup) ============================ -->
+  <main class="bg-warning-subtle border-bottom border-2 border-dark py-5">
+    <div class="container py-lg-3">
+
+      <span class="badge rounded-pill bg-white text-dark border border-2 border-dark text-uppercase px-3 py-2">
+        Secure checkout
+      </span>
+      <h1 class="display-4 fw-bold mt-3 mb-1">Checkout</h1>
+      <p class="fs-5 text-body-secondary mb-5">Just a few details and your manga is on its way.</p>
+
+      <!-- Solo maquetación: ningún dato se envía -->
+      <form action="#" method="post" novalidate>
+        <div class="row g-4 align-items-start">
+
+          <!-- ===================== Columna izquierda: datos ===================== -->
+          <div class="col-lg-7">
+
+            <!-- 1. Contacto -->
+            <section class="card border-3 border-dark rounded-4 shadow-lg mb-4" aria-labelledby="paso-contacto">
+              <div class="card-body p-4">
+                <h2 class="h4 fw-bold d-flex align-items-center gap-3 mb-4" id="paso-contacto">
+                  <span class="badge rounded-pill text-bg-warning border border-2 border-dark fs-6 px-3 py-2">1</span>
+                  Contact
+                </h2>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="pay-email">Email</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="email"
+                      id="pay-email" name="email" placeholder="you@email.com" autocomplete="email">
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input border-2 border-dark" type="checkbox" id="pay-newsletter"
+                        name="newsletter">
+                      <label class="form-check-label fw-semibold" for="pay-newsletter">Email me news and offers</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 2. Envío -->
+            <section class="card border-3 border-dark rounded-4 shadow-lg mb-4" aria-labelledby="paso-envio">
+              <div class="card-body p-4">
+                <h2 class="h4 fw-bold d-flex align-items-center gap-3 mb-4" id="paso-envio">
+                  <span class="badge rounded-pill text-bg-warning border border-2 border-dark fs-6 px-3 py-2">2</span>
+                  Shipping address
+                </h2>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label fw-bold" for="pay-nombre">First name</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-nombre" name="nombre" placeholder="Marta" autocomplete="given-name">
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label fw-bold" for="pay-apellido">Last name</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-apellido" name="apellido" placeholder="García" autocomplete="family-name">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="pay-direccion">Address</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-direccion" name="direccion" placeholder="Street, number, floor"
+                      autocomplete="address-line1">
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label fw-bold" for="pay-ciudad">City</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-ciudad" name="ciudad" placeholder="Valencia" autocomplete="address-level2">
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label fw-bold" for="pay-cp">Postal code</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-cp" name="cp" inputmode="numeric" placeholder="46001" autocomplete="postal-code">
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label fw-bold" for="pay-pais">Country</label>
+                    <select class="form-select border-2 border-dark focus-ring focus-ring-warning" id="pay-pais"
+                      name="pais" autocomplete="country-name">
+                      <option selected>Spain</option>
+                      <option>France</option>
+                      <option>Germany</option>
+                      <option>Italy</option>
+                      <option>Portugal</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label fw-bold" for="pay-telefono">Phone</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="tel"
+                      id="pay-telefono" name="telefono" placeholder="+34 600 000 000" autocomplete="tel">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 3. Pago -->
+            <section class="card border-3 border-dark rounded-4 shadow-lg" aria-labelledby="paso-pago">
+              <div class="card-body p-4">
+                <h2 class="h4 fw-bold d-flex align-items-center gap-3 mb-4" id="paso-pago">
+                  <span class="badge rounded-pill text-bg-warning border border-2 border-dark fs-6 px-3 py-2">3</span>
+                  Payment
+                </h2>
+
+                <!-- Método de pago (btn-check de Bootstrap) -->
+                <div class="d-grid gap-2 d-sm-flex mb-4" role="radiogroup" aria-label="Payment method">
+                  <input type="radio" class="btn-check" name="metodo" id="metodo-tarjeta" autocomplete="off" checked>
+                  <label class="btn btn-outline-dark border-2 fw-bold flex-fill" for="metodo-tarjeta">
+                    Credit / debit card
+                  </label>
+
+                  <input type="radio" class="btn-check" name="metodo" id="metodo-paypal" autocomplete="off">
+                  <label class="btn btn-outline-dark border-2 fw-bold flex-fill" for="metodo-paypal">
+                    PayPal
+                  </label>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="pay-tarjeta">Card number</label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-warning-subtle border-2 border-dark" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          viewBox="0 0 256 256">
+                          <path
+                            d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z">
+                          </path>
+                        </svg>
+                      </span>
+                      <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                        id="pay-tarjeta" name="tarjeta" inputmode="numeric" placeholder="1234 5678 9012 3456"
+                        autocomplete="cc-number">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="pay-titular">Name on card</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-titular" name="titular" placeholder="Marta García" autocomplete="cc-name">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fw-bold" for="pay-caducidad">Expiry date</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-caducidad" name="caducidad" inputmode="numeric" placeholder="MM / YY"
+                      autocomplete="cc-exp">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fw-bold" for="pay-cvc">CVC</label>
+                    <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                      id="pay-cvc" name="cvc" inputmode="numeric" placeholder="123" autocomplete="cc-csc">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- ===================== Columna derecha: resumen ===================== -->
+          <div class="col-lg-5">
+            <aside class="card border-3 border-dark rounded-4 shadow-lg" aria-labelledby="resumen-titulo">
+              <div class="card-body p-4">
+                <h2 class="h4 fw-bold mb-4" id="resumen-titulo">Order summary</h2>
+
+                <ul class="list-unstyled d-grid gap-3 mb-4">
+                  <li class="d-flex align-items-center gap-3">
+                    <span
+                      class="d-inline-flex flex-shrink-0 rounded-3 bg-warning-subtle border border-2 border-dark p-2"
+                      aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                          d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z">
+                        </path>
+                      </svg>
+                    </span>
+                    <div class="me-auto">
+                      <p class="fw-bold mb-0">One piece</p>
+                      <p class="small text-body-secondary mb-0">Qty 1</p>
+                    </div>
+                    <span class="fw-bold">$12.99</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <span
+                      class="d-inline-flex flex-shrink-0 rounded-3 bg-warning-subtle border border-2 border-dark p-2"
+                      aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                          d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z">
+                        </path>
+                      </svg>
+                    </span>
+                    <div class="me-auto">
+                      <p class="fw-bold mb-0">Naruto</p>
+                      <p class="small text-body-secondary mb-0">Qty 1</p>
+                    </div>
+                    <span class="fw-bold">$11.99</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <span
+                      class="d-inline-flex flex-shrink-0 rounded-3 bg-warning-subtle border border-2 border-dark p-2"
+                      aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                          d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z">
+                        </path>
+                      </svg>
+                    </span>
+                    <div class="me-auto">
+                      <p class="fw-bold mb-0">Frieren</p>
+                      <p class="small text-body-secondary mb-0">Qty 1</p>
+                    </div>
+                    <span class="fw-bold">$13.99</span>
+                  </li>
+                </ul>
+
+                <!-- Código promocional -->
+                <label class="form-label fw-bold" for="pay-promo">Promo code</label>
+                <div class="input-group mb-4">
+                  <input class="form-control border-2 border-dark focus-ring focus-ring-warning" type="text"
+                    id="pay-promo" name="promo" placeholder="NYAN2026">
+                  <button class="btn btn-outline-dark border-2 fw-bold" type="button">Apply</button>
+                </div>
+
+                <!-- Totales -->
+                <dl class="mb-0 pt-3 border-top border-2 border-dark">
+                  <div class="d-flex justify-content-between">
+                    <dt class="fw-semibold">Subtotal</dt>
+                    <dd class="fw-bold">$38.97</dd>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <dt class="fw-semibold">Shipping</dt>
+                    <dd><span class="badge text-bg-warning">Free</span></dd>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-baseline pt-3 border-top border-2 border-dark">
+                    <dt class="fs-4 fw-bold">Total</dt>
+                    <dd class="fs-3 fw-bold mb-0">$38.97</dd>
+                  </div>
+                </dl>
+
+                <!-- Solo maquetación: el botón abre el modal, no cobra nada -->
+                <button class="btn btn-warning btn-lg w-100 border-2 border-dark fw-bold shadow-sm mt-4" type="button"
+                  data-bs-toggle="modal" data-bs-target="#modal-pago">
+                  Pay $38.97
+                </button>
+
+                <p class="small text-center text-body-secondary mt-3 mb-0">
+                  Free shipping applied: your order is over $30. Taxes included.
+                </p>
+              </div>
+            </aside>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- ============================ MODAL DE FEEDBACK ============================ -->
+  <div class="modal fade" id="modal-pago" tabindex="-1" aria-labelledby="modal-pago-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-3 border-dark rounded-4 shadow-lg text-center">
+
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body pt-0 px-4">
+          <span class="d-inline-flex rounded-circle bg-warning border border-2 border-dark p-3 mb-3"
+            aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 256 256">
+              <path
+                d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z">
+              </path>
+            </svg>
+          </span>
+          <h2 class="modal-title h2 fw-bold" id="modal-pago-titulo">Order placed!</h2>
+          <p class="text-body-secondary mt-2 mb-0">
+            Thank you for your purchase. We have sent the confirmation to your email, and your manga will be at your
+            door in about 48 hours.
+          </p>
+        </div>
+
+        <div class="modal-footer border-0 justify-content-center pb-4">
+          <a class="btn btn-warning border-2 border-dark rounded-pill fw-bold px-4" href="./tienda.html">Back to the
+            shop</a>
+          <button type="button" class="btn btn-outline-dark border-2 rounded-pill fw-bold px-4"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ PIE DE PÁGINA ============================ -->
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+
+      <p class="pie__logo">NyanComics</p>
+      <p class="pie__texto">© 2026 NyanComics. All rights reserved. Made for manga fans everywhere.</p>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
