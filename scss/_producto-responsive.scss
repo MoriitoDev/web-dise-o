@@ -1,0 +1,21 @@
+/* ---------- responsive ---------- */
+@media (max-width: 48rem) {
+  .ficha {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ficha__portada {
+    max-width: 17rem;
+    margin-inline: auto;
+  }
+
+  .ficha__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-carrito {
+    flex: 1;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,18 @@
+.portada {
+  background-color: var(--amarillo);
+  border-bottom: var(--borde);
+  padding-block: 4.5rem;
+}
+
+.portada__titulo {
+  font-family: var(--fuente-display);
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.portada__subtitulo {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  color: #4a4453;
+}

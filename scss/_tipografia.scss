@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; 
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--tinta);
+  background-color: var(--crema);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #2f6fed;
+  outline-offset: 2px;
+}

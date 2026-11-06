@@ -1,0 +1,39 @@
+/* ---------- 10. Responsive ---------- */
+@media (max-width: 68rem) {          /* ~1088px */
+  .rejilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portada {
+    padding-block: 3.5rem;
+  }
+}
+
+@media (max-width: 40rem) {          /* ~640px */
+  .cabecera__interior {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .filtros {
+    justify-content: center;
+  }
+
+  .filtros__lista {
+    justify-content: center;
+  }
+
+  .rejilla {
+    grid-template-columns: 1fr;
+  }
+
+  .orden {
+    width: 100%;
+    justify-content: center;
+  }
+}

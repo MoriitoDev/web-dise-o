@@ -1,0 +1,11 @@
+/* relacionados */
+.relacionados {
+  border-top: var(--borde);
+  padding-block: 2.5rem 4rem;
+}
+
+.relacionados__titulo {
+  font-family: var(--fuente-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 1.5rem;
+}

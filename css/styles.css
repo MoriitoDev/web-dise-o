@@ -1,43 +1,24 @@
-/* =========================================================
-   NyanComics - Browse Manga
-   Práctica 3 · Maquetación con HTML + CSS
-   Orden del fichero:
-     1. Variables
-     2. Reset y tipografía base
-     3. Utilidades (contenedor, iconos)
-     4. Cabecera
-     5. Portada (hero)
-     6. Filtros y ordenación
-     7. Rejilla de productos (tarjetas)
-     8. Paginación
-     9. Pie de página + formulario
-    10. Responsive
-   ========================================================= */
-
-/* ---------- 1. Variables ---------- */
+@charset "UTF-8";
 :root {
   /* Paleta de colores: se usa en toda la página */
   --naranja: #f7a928;
   --naranja-oscuro: #e0901a;
-  --amarillo: #fbe89b;        /* portada */
-  --amarillo-claro: #fdf3c6;  /* botones, paginación */
-  --crema: #fffbf2;           /* fondo de la página */
-  --tinta: #211b28;           /* texto y bordes */
+  --amarillo: #fbe89b; /* portada */
+  --amarillo-claro: #fdf3c6; /* botones, paginación */
+  --crema: #fffbf2; /* fondo de la página */
+  --tinta: #211b28; /* texto y bordes */
   --gris: #6f6a77;
-  --oscuro: #241c2b;          /* fondo del pie */
+  --oscuro: #241c2b; /* fondo del pie */
   --blanco: #ffffff;
-
   /* Tipografías */
   --fuente-display: "Bagel Fat One", cursive;
   --fuente-texto: "Nunito", sans-serif;
-
   /* Medidas reutilizables */
   --borde: 2px solid var(--tinta);
   --radio: 1rem;
   --sombra: 0 6px 18px rgba(33, 27, 40, 0.10);
 }
 
-/* ---------- 2. Reset y tipografía base ---------- */
 *,
 *::before,
 *::after {
@@ -45,7 +26,7 @@
 }
 
 html {
-  font-size: 100%; 
+  font-size: 100%;
 }
 
 body {
@@ -91,7 +72,6 @@ a {
   outline-offset: 2px;
 }
 
-/* ---------- 3. Utilidades ---------- */
 .contenedor {
   width: min(92%, 86rem);
   margin-inline: auto;
@@ -150,7 +130,7 @@ a {
 }
 
 .cabecera__interior {
-  display: flex;              
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -188,13 +168,12 @@ a {
 }
 
 .menu {
-  display: flex;              
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.7rem;
 }
 
-/* ---------- 5. Portada (hero) ---------- */
 .portada {
   background-color: var(--amarillo);
   border-bottom: var(--borde);
@@ -220,7 +199,7 @@ a {
 }
 
 .filtros {
-  display: flex;              
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -229,7 +208,7 @@ a {
 }
 
 .filtros__lista {
-  display: flex;              
+  display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
 }
@@ -257,7 +236,7 @@ a {
 }
 
 .orden {
-  display: flex;              
+  display: flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.9rem;
@@ -277,13 +256,13 @@ a {
 
 /* ---------- 7. Rejilla de productos ---------- */
 .rejilla {
-  display: grid;                            /* Grid para la rejilla */
+  display: grid; /* Grid para la rejilla */
   grid-template-columns: repeat(4, 1fr);
   gap: 1.8rem;
 }
 
 .tarjeta {
-  display: flex;              
+  display: flex;
   flex-direction: column;
   gap: 0.75rem;
   padding: 0.9rem;
@@ -304,7 +283,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3/4;
   object-fit: cover;
   background-color: var(--amarillo-claro);
   border: var(--borde);
@@ -312,7 +291,7 @@ a {
 }
 
 .tarjeta__cuerpo {
-  display: flex;              
+  display: flex;
   flex-direction: column;
   flex: 1;
   gap: 0.2rem;
@@ -331,7 +310,7 @@ a {
 }
 
 .tarjeta__pie {
-  display: flex;              
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
@@ -364,7 +343,7 @@ a {
 
 /* ---------- 8. Paginación ---------- */
 .paginacion {
-  display: flex;              
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -400,7 +379,7 @@ a {
 }
 
 .pie__interior {
-  display: flex;              
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
@@ -421,7 +400,7 @@ a {
 
 /* Formulario de newsletter */
 .newsletter {
-  display: flex;              
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.7rem;
@@ -435,11 +414,10 @@ a {
 .newsletter__etiqueta {
   font-weight: 700;
   font-size: 1.8rem;
-
 }
 
 .newsletter__campo {
-  display: flex;              
+  display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   width: 100%;
@@ -464,45 +442,37 @@ a {
 }
 
 /* ---------- 10. Responsive ---------- */
-@media (max-width: 68rem) {          /* ~1088px */
+@media (max-width: 68rem) { /* ~1088px */
   .rejilla {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .portada {
     padding-block: 3.5rem;
   }
 }
-
-@media (max-width: 40rem) {          /* ~640px */
+@media (max-width: 40rem) { /* ~640px */
   .cabecera__interior {
     justify-content: center;
     text-align: center;
   }
-
   .menu {
     justify-content: center;
     width: 100%;
   }
-
   .filtros {
     justify-content: center;
   }
-
   .filtros__lista {
     justify-content: center;
   }
-
   .rejilla {
     grid-template-columns: 1fr;
   }
-
   .orden {
     width: 100%;
     justify-content: center;
   }
 }
-
 /* ---------- Landing page ---------- */
 .landing {
   position: relative;
@@ -598,21 +568,17 @@ a {
   .landing {
     border-width: 0.4rem;
   }
-
   .cabecera--landing .cabecera__interior {
     padding-block: 1rem;
   }
-
   .landing__hero {
     display: block;
     min-height: auto;
     padding-block: 2rem 3rem;
   }
-
   .landing__titulo {
     font-size: clamp(2.9rem, 11vw, 4.2rem);
   }
-
   .landing__cats {
     position: relative;
     right: auto;
@@ -623,19 +589,16 @@ a {
     margin: 1.5rem auto 0;
   }
 }
-
 @media (max-width: 30rem) {
   .landing__cta {
     font-size: 1.15rem;
     padding: 0.6rem 0.95rem;
   }
-
   .landing__cats {
     max-width: 100%;
     margin-top: 1rem;
   }
 }
-
 /* ---------- Landing: historia, motivos y promo ---------- */
 .historia,
 .promo {
@@ -840,24 +803,19 @@ a {
     grid-template-columns: 1fr;
     gap: 2.2rem;
   }
-
   .motivos__lista {
     grid-template-columns: 1fr;
   }
-
   .promo__caja {
     padding: 1.8rem;
     box-shadow: 5px 5px 0 var(--tinta);
   }
 }
-
 @media (max-width: 30rem) {
   .historia__datos {
     gap: 1.2rem;
   }
 }
-
-
 /* ---------- 11. Multimedia (audio + vídeo) ---------- */
 .multimedia {
   padding: 3.5rem 0;

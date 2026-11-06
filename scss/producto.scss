@@ -1,0 +1,7 @@
+// Punto de entrada de css/producto.css
+// Usa las variables CSS definidas en styles.css, que se carga antes en producto.html.
+
+@use "migas";
+@use "ficha";
+@use "relacionados";
+@use "producto-responsive";

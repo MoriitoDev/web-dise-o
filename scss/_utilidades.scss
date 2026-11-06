@@ -1,0 +1,101 @@
+.contenedor {
+  width: min(92%, 86rem);
+  margin-inline: auto;
+}
+
+.icono {
+  width: 1.5em;
+  height: 1.5em;
+  fill: black;
+  stroke: black;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Botones generales (cabecera y formulario) */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.2rem;
+  border: var(--borde);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background-color: var(--blanco);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton--suave {
+  background-color: var(--amarillo-claro);
+}
+
+.boton--suave:hover {
+  background-color: var(--amarillo);
+}
+
+.boton--relleno {
+  background-color: var(--naranja);
+}
+
+.boton--relleno:hover {
+  background-color: var(--naranja-oscuro);
+}
+
+/* ---------- 4. Cabecera ---------- */
+.cabecera {
+  background-color: var(--blanco);
+  border-bottom: var(--borde);
+}
+
+.cabecera__interior {
+  display: flex;              
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding-block: 0.9rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logo__caja {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background-color: var(--naranja);
+  border: var(--borde);
+}
+
+.logo__caja .icono {
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke-width: 1.8;
+}
+
+.logo__texto {
+  font-family: var(--fuente-display);
+  font-size: 1.55rem;
+  letter-spacing: 0.5px;
+}
+
+.menu {
+  display: flex;              
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}

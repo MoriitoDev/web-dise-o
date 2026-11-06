@@ -1,0 +1,68 @@
+/* ---------- 9. Pie de página + formulario ---------- */
+.pie {
+  background-color: var(--oscuro);
+}
+
+.pie__interior {
+  display: flex;              
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding-block: 3.2rem;
+  text-align: center;
+}
+
+.pie__logo {
+  font-family: var(--fuente-display);
+  font-size: 1.9rem;
+  color: var(--amarillo);
+}
+
+.pie__texto {
+  font-size: 0.95rem;
+  color: #b8aec6;
+}
+
+/* Formulario de newsletter */
+.newsletter {
+  display: flex;              
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  width: min(100%, 32rem);
+  background-color: var(--blanco);
+  padding: 1.5rem 1.8rem;
+  border: var(--borde);
+  border-radius: 0.8rem;
+}
+
+.newsletter__etiqueta {
+  font-weight: 700;
+  font-size: 1.8rem;
+
+}
+
+.newsletter__campo {
+  display: flex;              
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.newsletter__input {
+  flex: 1 1 14rem;
+  padding: 0.6rem 1.1rem;
+  background-color: var(--oscuro);
+  border-radius: 999px;
+  color: var(--blanco);
+}
+
+.newsletter__input::placeholder {
+  color: #a99fb9;
+}
+
+.newsletter__caja {
+  margin: 0 auto;
+  width: min(100%, 32rem);
+  margin-top: 3.5rem;
+}

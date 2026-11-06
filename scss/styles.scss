@@ -1,0 +1,16 @@
+// Punto de entrada de css/styles.css
+// NyanComics - Browse Manga
+// El orden de los @use es el orden de la cascada: no lo cambies sin comprobarlo.
+
+@use "variables";
+@use "tipografia";
+@use "utilidades";   // contenedor, icono, botones y cabecera
+@use "hiro";         // portada
+@use "filtros";
+@use "rejilla";
+@use "paginacion";
+@use "pie";
+@use "responsive";
+@use "landing";
+@use "landing-secciones";
+@use "multimedia";

@@ -1,0 +1,60 @@
+/* ---------- 6. Filtros y ordenación ---------- */
+.catalogo {
+  padding-block: 2.5rem 3.5rem;
+}
+
+.filtros {
+  display: flex;              
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.filtros__lista {
+  display: flex;              
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.etiqueta {
+  padding: 0.45rem 1.15rem;
+  border: var(--borde);
+  border-radius: 999px;
+  background-color: var(--blanco);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background-color 0.15s ease;
+}
+
+.etiqueta:hover {
+  background-color: var(--amarillo-claro);
+}
+
+.etiqueta--activa {
+  background-color: var(--naranja);
+}
+
+.etiqueta--activa:hover {
+  background-color: var(--naranja);
+}
+
+.orden {
+  display: flex;              
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  background-color: var(--blanco);
+  border: var(--borde);
+  border-radius: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.orden__select {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}

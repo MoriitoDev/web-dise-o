@@ -1,0 +1,86 @@
+/* ---------- 7. Rejilla de productos ---------- */
+.rejilla {
+  display: grid;                            /* Grid para la rejilla */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.tarjeta {
+  display: flex;              
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  background-color: var(--blanco);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(33, 27, 40, 0.16);
+}
+
+.tarjeta__imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background-color: var(--amarillo-claro);
+  border: var(--borde);
+  border-radius: 0.7rem;
+}
+
+.tarjeta__cuerpo {
+  display: flex;              
+  flex-direction: column;
+  flex: 1;
+  gap: 0.2rem;
+  padding-inline: 0.2rem;
+}
+
+.tarjeta__titulo {
+  font-family: var(--fuente-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.tarjeta__autor {
+  font-size: 0.92rem;
+  color: var(--gris);
+}
+
+.tarjeta__pie {
+  display: flex;              
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+.tarjeta__precio {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.boton-compra {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background-color: var(--naranja);
+  border: var(--borde);
+  border-radius: 0.55rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.boton-compra:hover {
+  background-color: var(--naranja-oscuro);
+  transform: translateY(-2px);
+}
