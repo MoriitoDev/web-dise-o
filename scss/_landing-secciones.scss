@@ -30,6 +30,103 @@
   text-align: center;
 }
 
+/* Slider automático: cada diapositiva entra y sale con keyframes. */
+.slider {
+  padding-block: 4rem;
+  background: var(--amarillo-claro);
+  border-block: var(--borde);
+}
+
+.slider__ventana {
+  max-width: 52rem;
+  margin: 2rem auto 0;
+  overflow: hidden;
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+}
+
+.slider__pista {
+  display: flex;
+  width: 300%;
+  animation: recorrer-slider 18s infinite;
+}
+
+.slider__ventana:hover .slider__pista,
+.slider__ventana:focus-within .slider__pista {
+  animation-play-state: paused;
+}
+
+.slider__diapositiva {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  width: 33.3333%;
+  min-height: 17rem;
+  padding: 1.5rem;
+}
+
+.slider__diapositiva img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border: 2px solid var(--tinta);
+  border-radius: calc(var(--radio) / 2);
+}
+
+.slider__texto span { font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+.slider__texto h3 { margin-top: .6rem; font: 400 clamp(1.4rem, 3vw, 2.2rem)/1.05 var(--fuente-display); }
+.slider__texto p { margin-top: .7rem; color: var(--gris); }
+.slider__ayuda { margin-top: 1rem; text-align: center; color: var(--gris); font-size: .85rem; }
+
+@keyframes recorrer-slider {
+  0%, 28% { transform: translateX(0); }
+  33%, 61% { transform: translateX(-33.3333%); }
+  66%, 94% { transform: translateX(-66.6667%); }
+  100% { transform: translateX(0); }
+}
+
+/* Aparición suave de elementos del hero al cargar la página. */
+.landing__copy { animation: aparecer 700ms ease-out both; }
+.landing__cats { animation: flotar 3s ease-in-out 700ms infinite alternate; }
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flotar {
+  to { transform: translateY(-.65rem); }
+}
+
+/* Entrada escalonada al abrir la tienda. */
+.pagina-tienda .portada__titulo { animation: aparecer 650ms ease-out both; }
+.pagina-tienda .portada__subtitulo { animation: aparecer 650ms ease-out 120ms both; }
+.pagina-tienda .filtros { animation: aparecer 650ms ease-out 220ms both; }
+.pagina-tienda .tarjeta { animation: aparecer-tarjeta 600ms cubic-bezier(.2, .75, .25, 1) both; }
+.pagina-tienda .tarjeta:nth-child(1) { animation-delay: 280ms; }
+.pagina-tienda .tarjeta:nth-child(2) { animation-delay: 360ms; }
+.pagina-tienda .tarjeta:nth-child(3) { animation-delay: 440ms; }
+.pagina-tienda .tarjeta:nth-child(4) { animation-delay: 520ms; }
+.pagina-tienda .tarjeta:nth-child(5) { animation-delay: 600ms; }
+.pagina-tienda .tarjeta:nth-child(6) { animation-delay: 680ms; }
+.pagina-tienda .tarjeta:nth-child(7) { animation-delay: 760ms; }
+.pagina-tienda .tarjeta:nth-child(8) { animation-delay: 840ms; }
+
+@keyframes aparecer-tarjeta {
+  from { opacity: 0; translate: 0 1.1rem; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider__pista, .landing__copy, .landing__cats,
+  .pagina-tienda .portada__titulo, .pagina-tienda .portada__subtitulo,
+  .pagina-tienda .filtros, .pagina-tienda .tarjeta { animation: none; }
+}
+
 .historia__interior {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -214,6 +311,8 @@
 }
 
 @media (max-width: 30rem) {
+  .slider__diapositiva { grid-template-columns: 1fr; gap: .5rem; text-align: center; }
+  .slider__diapositiva img { max-height: 9rem; }
   .historia__datos {
     gap: 1.2rem;
   }
