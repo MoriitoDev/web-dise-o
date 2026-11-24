@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop anime merchandise from JoJo's Bizarre Adventure and Jujutsu Kaisen at NyanComics.">
+  <title>Anime Merch | NyanComics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="pagina-tienda">
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__interior">
+      <a class="logo" href="../index.html">
+        <span class="logo__caja" aria-hidden="true">
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path d="M231.65,194.55,198.46,36.75a16,16,0,0,0-19-12.39L132.65,34.42a16.08,16.08,0,0,0-12.3,19l33.19,157.8A16,16,0,0,0,169.16,224a16.25,16.25,0,0,0,3.38-.36l46.81-10.06A16.09,16.09,0,0,0,231.65,194.55ZM136,50.15c0-.06,0-.09,0-.09l46.8-10,3.33,15.87L139.33,66Zm6.62,31.47,46.82-10.05,3.34,15.9L146,97.53Zm6.64,31.57,46.82-10.06,13.3,63.24-46.82,10.06ZM216,197.94l-46.8,10-3.33-15.87L212.67,182,216,197.85C216,197.91,216,197.94,216,197.94ZM104,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V48A16,16,0,0,0,104,32ZM56,48h48V64H56Zm0,32h48v96H56Zm48,128H56V192h48v16Z"></path></svg>
+        </span>
+        <span class="logo__texto">NyanComics</span>
+      </a>
+
+      <nav class="menu" aria-label="Main menu">
+        <a class="boton boton--suave" href="./tienda.html">Shop</a>
+        <a class="boton boton--suave" href="./nuevos.html">New</a>
+        <a class="boton boton--suave" href="./merch.html" aria-current="page">Merch</a>
+
+        <a class="boton boton--suave" href="./checkout.html" aria-label="View your cart">
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256" aria-hidden="true">
+            <path d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"></path>
+          </svg>
+          Cart
+        </a>
+        <a class="boton boton--relleno" href="./login.html">
+          Log In / Sign in
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portada" aria-labelledby="merch-titulo">
+    <div class="contenedor">
+      <h1 class="portada__titulo" id="merch-titulo">Merch from your favorite anime.</h1>
+      <p class="portada__subtitulo">Officially licensed apparel and collectibles from JoJo’s Bizarre Adventure and Jujutsu Kaisen.</p>
+    </div>
+  </section>
+
+  <main class="contenedor catalogo">
+    <div class="filtros">
+      <ul class="filtros__lista" aria-label="Merch categories">
+        <li><button class="etiqueta etiqueta--activa" type="button">All merch</button></li>
+        <li><button class="etiqueta" type="button">T-shirts</button></li>
+        <li><button class="etiqueta" type="button">JoJo’s</button></li>
+        <li><button class="etiqueta" type="button">Jujutsu Kaisen</button></li>
+        <li><button class="etiqueta" type="button">Collectibles</button></li>
+      </ul>
+
+      <div class="orden">
+        <label class="orden__texto" for="ordenar">Sort by:</label>
+        <select class="orden__select" id="ordenar" name="ordenar">
+          <option>Featured</option>
+          <option>Newest</option>
+          <option>Price: low to high</option>
+          <option>Price: high to low</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="rejilla" aria-label="NyanComics merchandise">
+      <a class="tarjeta" href="./producto-merch.html">
+        <img class="tarjeta__imagen"
+          src="https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw5dd8f3f4/images/6715720335404-1-ripple-junction-unisex-t-shirts-jojo-s-bizarre-adventure-diamond-is-unbreakable-t-shirt-crunchyroll-exclusive-29755292516396.png"
+          alt="Official JoJo's Bizarre Adventure: Diamond Is Unbreakable T-shirt" width="600" height="800">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">JoJo’s: Diamond Is Unbreakable Tee</h2>
+          <p class="tarjeta__autor">Official Crunchyroll exclusive · 100% cotton</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">24.95 €</span>
+            <span class="boton-compra">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+              Add
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a class="tarjeta" href="https://store.crunchyroll.com/products/cr-loves-jujutsu-kaisen-yuji-itadori-no-regrets-tshirt-10000000168.html" target="_blank" rel="noopener">
+        <img class="tarjeta__imagen"
+          src="https://store.crunchyroll.com/dw/image/v2/BDGC_PRD/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw08c71d9c/images/6615007363116-1-3sxty-unisex-t-shirts-cr-loves-jujutsu-kaisen-yuji-itadori-no-regrets-t-shirt-28678592462892.jpg"
+          alt="Official Jujutsu Kaisen Yuji Itadori No Regrets T-shirt" width="600" height="800" loading="lazy">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Jujutsu Kaisen: Yuji No Regrets Tee</h2>
+          <p class="tarjeta__autor">Official CR Loves collection · heavyweight cotton</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">29.95 €</span>
+            <span class="boton-compra">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+              Add
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a class="tarjeta" href="https://store.crunchyroll.com/eu/es/en/products/jujutsu-kaisen-geto-enamel-pin-666772819495.html" target="_blank" rel="noopener">
+        <img class="tarjeta__imagen"
+          src="https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw4bd23840/images/6780540420140-1-traly-enamel-pins-jujutsu-kaisen-geto-enamel-pin-31778733621292.jpg"
+          alt="Official Jujutsu Kaisen Suguru Geto enamel pin" width="600" height="800" loading="lazy">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">Jujutsu Kaisen: Geto Enamel Pin</h2>
+          <p class="tarjeta__autor">Officially licensed · approx. 1.5 × 1.5 in</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">6.50 €</span>
+            <span class="boton-compra">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+              Add
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a class="tarjeta" href="https://store.crunchyroll.com/products/jojos-bizarre-adventure-jojo-stands-long-sleeve-crunchyroll-exclusive-196889299977.html" target="_blank" rel="noopener">
+        <img class="tarjeta__imagen"
+          src="https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw60d44a3d/Apparel/JWAL2323%20-%20JoJo%27s%20Bizarre%20Adventure%20-%20JoJo%20Stands%20Long%20Sleeve%20-%20Crunchyroll%20Exclusive%21/ripple-junction-unisex-t-shirts-jojo-s-bizarre-adventure-jojo-stands-long-sleeve-crunchyroll-exclusive-32618765418540.jpg"
+          alt="Official JoJo's Bizarre Adventure JoJo Stands long-sleeve shirt" width="600" height="800" loading="lazy">
+        <div class="tarjeta__cuerpo">
+          <h2 class="tarjeta__titulo">JoJo’s: Stands Long Sleeve</h2>
+          <p class="tarjeta__autor">Official Crunchyroll exclusive · ring-spun cotton</p>
+          <div class="tarjeta__pie">
+            <span class="tarjeta__precio">25.97 €</span>
+            <span class="boton-compra">
+              <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" aria-hidden="true"><path d="M104,216a16,16,0,1,1-16-16A16,16,0,0,1,104,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,192,200ZM239.71,74.14l-25.64,92.28A24.06,24.06,0,0,1,191,184H92.16A24.06,24.06,0,0,1,69,166.42L33.92,40H16a8,8,0,0,1,0-16H40a8,8,0,0,1,7.71,5.86L57.19,64H232a8,8,0,0,1,7.71,10.14ZM221.47,80H61.64l22.81,82.14A8,8,0,0,0,92.16,168H191a8,8,0,0,0,7.71-5.86Z"></path></svg>
+              Add
+            </span>
+          </div>
+        </div>
+      </a>
+    </section>  
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p class="pie__logo">NyanComics</p>
+      <p class="pie__texto">© 2026 NyanComics. All rights reserved. Made for manga fans everywhere.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

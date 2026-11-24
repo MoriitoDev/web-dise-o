@@ -2,10 +2,11 @@
 // NyanComics - Browse Manga
 // El orden de los @use es el orden de la cascada: no lo cambies sin comprobarlo.
 
+@use "bootstrap/dist/css/bootstrap.css";
 @use "variables";
 @use "tipografia";
-@use "utilidades";   // contenedor, icono, botones y cabecera
-@use "hiro";         // portada
+@use "utilidades";
+@use "hiro";
 @use "filtros";
 @use "rejilla";
 @use "paginacion";
@@ -14,3 +15,8 @@
 @use "landing";
 @use "landing-secciones";
 @use "multimedia";
+@use "migas";
+@use "ficha";
+@use "relacionados";
+@use "producto-responsive";
+@use "nuevos";

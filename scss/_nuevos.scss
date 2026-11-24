@@ -1,0 +1,229 @@
+// Estilos de novedades y de la ficha del producto nuevo.
+
+/* ---------- Etiquetas de tipo (producto, promo, evento, servicio) ---------- */
+.chip {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: var(--amarillo);
+  border: var(--borde);
+  border-radius: 999px;
+}
+
+.chip--promo {
+  background-color: var(--blanco);
+}
+
+.chip--servicio {
+  background-color: var(--amarillo-claro);
+}
+
+/* ---------- Destacado: promoción principal ---------- */
+.destacado {
+  padding-block: 3rem 1rem;
+}
+
+.destacado__caja {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background-color: var(--naranja);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: 7px 7px 0 var(--tinta);
+}
+
+.destacado__titulo {
+  margin-top: 0.9rem;
+  font-family: var(--fuente-display);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.destacado__parrafo {
+  margin-top: 0.9rem;
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+.destacado__cta {
+  margin-top: 1.4rem;
+  background-color: var(--blanco);
+}
+
+.destacado__dato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+  background-color: var(--blanco);
+  border: var(--borde);
+  border-radius: var(--radio);
+  text-align: center;
+}
+
+.destacado__cifra {
+  font-family: var(--fuente-display);
+  font-size: clamp(3.5rem, 9vw, 5.5rem);
+  line-height: 1;
+}
+
+.destacado__texto {
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+/* ---------- Novedades: rejilla de productos nuevos ---------- */
+.novedades {
+  padding-block: 2.5rem 3rem;
+}
+
+.novedades .filtros {
+  margin-top: 1.5rem;
+}
+
+.novedades .rejilla {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Eventos y servicios ---------- */
+.eventos {
+  padding-block: 3rem 4.5rem;
+  border-top: var(--borde);
+}
+
+.eventos__lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.evento {
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem;
+  background-color: var(--blanco);
+  border: 3px solid var(--tinta);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.evento__fecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4.6rem;
+  height: 4.6rem;
+  background-color: var(--amarillo-claro);
+  border: var(--borde);
+  border-radius: 0.7rem;
+  text-align: center;
+}
+
+.evento__mes {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.evento__dia {
+  font-family: var(--fuente-display);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.evento__cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.evento__titulo {
+  font-family: var(--fuente-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.evento__texto {
+  font-size: 0.95rem;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+/* ---------- Ficha de producto nuevo ---------- */
+.nuevo-aviso {
+  padding: 0.8rem 1rem;
+  background-color: var(--amarillo);
+  border: var(--borde);
+  border-radius: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.nuevo-subtitulo {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gris);
+}
+
+.nuevo-lista {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.nuevo-lista li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.nuevo-lista li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--naranja);
+  border: 2px solid var(--tinta);
+  border-radius: 50%;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 68rem) {
+  .destacado__caja {
+    grid-template-columns: 1fr;
+  }
+
+  .eventos__lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 40rem) {
+  .destacado__caja {
+    box-shadow: 4px 4px 0 var(--tinta);
+  }
+
+  .eventos__lista {
+    grid-template-columns: 1fr;
+  }
+}
